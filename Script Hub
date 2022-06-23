@@ -93,6 +93,13 @@ MiscSection:NewButton("RemoteSpy V2", "Used for make script", function()
 
     print("Clicked")
 end)
+MiscSection:NewButton("Fe nebula Script", "You need the nebula blade it free", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Tbs4eCrt"))() 
+
+    print("Clicked")
+end)
+
+
 
 local Tab = Window:NewTab("Credits")
 local CreditsSection = Tab:NewSection("Credits")
