@@ -6,12 +6,14 @@ local Tab = Window:NewTab("Home")
 local HomeSection = Tab:NewSection("Welcome To Tay Hub")
 local HomeSection = Tab:NewSection("Made By Tayy#0071")
 local HomeSection = Tab:NewSection("Add me on discord if there is a problem.")
+local HomeSection = Tab:NewSection("if you have any suggestions to add send me a dm.")
 
 local Tab = Window:NewTab("Main")
 local MainSection = Tab:NewSection("Main")
 MainSection:NewSlider("WalkSpeed", "Speed When you use shiftlock it remove ", 500, 0, function(s) 
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+
 MainSection:NewDropdown("Prison Life guns", "Prison life Guns", {"AK-47", "Remington 870", "M9"}, function(currentOption)
 local args = {
     [1] = workspace.Prison_ITEMS.giver:FindFirstChild("AK-47").ITEMPICKUP
@@ -32,8 +34,6 @@ local args = {
 workspace.Remote.ItemHandler:InvokeServer(unpack(args))
     print(currentOption)
 end)
-
-
 
 MainSection:NewSlider("JumpPower", "JumpPower Hack", 500, 50, function(s) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
@@ -64,11 +64,18 @@ ScriptSection:NewButton("Owl Hub", "Owl Hub Aimbot", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
     print("Clicked")
 end) 
+ScriptSection:NewButton("Fates Admin", "Fates Admins", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+    print("Clicked")
+end)
+
 local Tab = Window:NewTab("Settings")
 local SettingsSection = Tab:NewSection("Settings")
 SettingsSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.G, function() 
 	Library:ToggleUI()
 end)
+
+
 
 local Tab = Window:NewTab("Misc")
 local MiscSection = Tab:NewSection("Miscellaneous")
@@ -86,16 +93,6 @@ MiscSection:NewButton("RemoteSpy V2", "Used for make script", function()
 
     print("Clicked")
 end)
-MiscSection:NewButton("RemoteSpy V3", "Used for make script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nootchtai/FrostHook_Spy/master/Spy.lua"))() 
-
-    print("Clicked")
-end)
-
-
-
-
-
 
 local Tab = Window:NewTab("Credits")
 local CreditsSection = Tab:NewSection("Credits")
