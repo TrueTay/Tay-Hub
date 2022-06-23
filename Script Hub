@@ -1,0 +1,70 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Tay Hub", "Midnight")  
+
+local Tab = Window:NewTab("Home")  
+local HomeSection = Tab:NewSection("Welcome To Tay Hub")
+local HomeSection = Tab:NewSection("Made By Tayy#0071")
+local HomeSection = Tab:NewSection("Add me on discord if there is a problem.")
+
+local Tab = Window:NewTab("Main")
+local MainSection = Tab:NewSection("Main")
+MainSection:NewSlider("WalkSpeed", "Speed When you use shiftlock it remove ", 500, 0, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+MainSection:NewSlider("JumpPower", "JumpPower Hack", 500, 50, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Tab = Window:NewTab("Game Scripts")
+local ScriptSection = Tab:NewSection("Script Hub")
+ScriptSection:NewButton("Nexus Prison Life", "Prison Life Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
+    print("Clicked")
+end)
+ScriptSection:NewButton("Domain X", "Domain X Script Hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+    print("Clicked")
+end) 
+ScriptSection:NewButton("Cheesy Hub", "Cheesy Hub Support 22 Games", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CheeseyMine/CheeseyHub/main/CheeseyHubV6"))()
+    print("Clicked")
+end) 
+local Tab = Window:NewTab("Scripts")
+local ScriptSection = Tab:NewSection("Script")
+ScriptSection:NewButton("Infinite Yield", "Infinite Yield Admin Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+    print("Clicked")
+end)
+ScriptSection:NewButton("Owl Hub", "Owl Hub Aimbot", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+    print("Clicked")
+end) 
+local Tab = Window:NewTab("Settings")
+local SettingsSection = Tab:NewSection("Settings")
+SettingsSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.G, function() 
+	Library:ToggleUI()
+end)
+
+local Tab = Window:NewTab("Misc")
+local MiscSection = Tab:NewSection("Miscellaneous")
+MiscSection:NewButton("Dark Dex", "Roblox Explorer", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/DinosaurXxX/b757fe011e7e600c0873f967fe427dc2/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4"))()
+    print("Clicked")
+end)
+MiscSection:NewButton("RemoteSpy", "Used for make script", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/DJZa4uKy"))()  
+
+    print("Clicked")
+end)
+
+
+
+local Tab = Window:NewTab("Credits")
+local CreditsSection = Tab:NewSection("Credits")
+local CreditsSection = Tab:NewSection("Made By XTAYComing")
+local CreditsSection = Tab:NewSection("Tayy#0071")
+
+print("TayOnTop!")
