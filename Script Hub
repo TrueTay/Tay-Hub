@@ -12,6 +12,28 @@ local MainSection = Tab:NewSection("Main")
 MainSection:NewSlider("WalkSpeed", "Speed When you use shiftlock it remove ", 500, 0, function(s) 
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+MainSection:NewDropdown("Prison Life guns", "Prison life Guns", {"AK-47", "Remington 870", "M9"}, function(currentOption)
+local args = {
+    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("AK-47").ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+
+local args = {
+    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Remington 870").ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    
+local args = {
+    [1] = workspace.Prison_ITEMS.giver.M9.ITEMPICKUP
+}
+
+workspace.Remote.ItemHandler:InvokeServer(unpack(args))
+    print(currentOption)
+end)
+
+
 
 MainSection:NewSlider("JumpPower", "JumpPower Hack", 500, 50, function(s) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
@@ -54,11 +76,24 @@ MiscSection:NewButton("Dark Dex", "Roblox Explorer", function()
     loadstring(game:HttpGet("https://gist.githubusercontent.com/DinosaurXxX/b757fe011e7e600c0873f967fe427dc2/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4"))()
     print("Clicked")
 end)
-MiscSection:NewButton("RemoteSpy", "Used for make script", function()
+MiscSection:NewButton("RemoteSpy V1", "Used for make script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/DJZa4uKy"))()  
 
     print("Clicked")
 end)
+MiscSection:NewButton("RemoteSpy V2", "Used for make script", function()
+    loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))() 
+
+    print("Clicked")
+end)
+MiscSection:NewButton("RemoteSpy V3", "Used for make script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nootchtai/FrostHook_Spy/master/Spy.lua"))() 
+
+    print("Clicked")
+end)
+
+
+
 
 
 
