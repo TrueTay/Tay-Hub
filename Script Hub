@@ -68,10 +68,7 @@ end)
 ScriptSection:NewButton("Amterasu Hub", "Only Work on criminality", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tubris/public-shit-/main/ama%20hub%20crim%20free"))()
     print("Clicked")
-
-
-
-
+end)
 local Tab = Window:NewTab("Scripts")
 local ScriptSection = Tab:NewSection("Script")
 ScriptSection:NewButton("Infinite Yield", "Infinite Yield Admin Script", function()
