@@ -1,6 +1,13 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Tay Hub", "Midnight")  
+local Window = Library.CreateLib("Tay Hub", "Midnight")  --You can change the theme to      LightTheme
+--DarkTheme
+   -- GrapeTheme
+   -- BloodTheme
+   -- Ocean
+   -- Midnight
+   -- Sentinel
+    --Synapse
 
 local Tab = Window:NewTab("Home")  
 local HomeSection = Tab:NewSection("Welcome To Tay Hub")
@@ -14,31 +21,22 @@ MainSection:NewSlider("WalkSpeed", "Speed When you use shiftlock it remove ", 50
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-MainSection:NewDropdown("Prison Life guns", "Prison life Guns", {"AK-47", "Remington 870", "M9"}, function(currentOption)
-local args = {
-    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("AK-47").ITEMPICKUP
-}
-
-workspace.Remote.ItemHandler:InvokeServer(unpack(args))
-
-local args = {
-    [1] = workspace.Prison_ITEMS.giver:FindFirstChild("Remington 870").ITEMPICKUP
-}
-
-workspace.Remote.ItemHandler:InvokeServer(unpack(args))
-    
-local args = {
-    [1] = workspace.Prison_ITEMS.giver.M9.ITEMPICKUP
-}
-
-workspace.Remote.ItemHandler:InvokeServer(unpack(args))
-    print(currentOption)
-end)
-
 MainSection:NewSlider("JumpPower", "JumpPower Hack", 500, 50, function(s) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
-
+MainSection:NewButton("Teleport", "ctrl + click", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/sAmc4YvK"))()
+    print("Clicked")
+end)
+MainSection:NewButton("Noclip Gui", "A noclip Gui", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/9LBsfRkD"))()
+    print("Clicked")
+end)
+MainSection:NewDropdown("Give Gun", "Gives the localplayer a gun only on prison life", {"M9", "Remington 870", "AK-47"}, function(v)
+        local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver[v].ITEMPICKUP
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+        Event:InvokeServer(A_1)
+    end)
 local Tab = Window:NewTab("Game Scripts")
 local ScriptSection = Tab:NewSection("Script Hub")
 ScriptSection:NewButton("Nexus Prison Life", "Prison Life Script", function()
@@ -56,17 +54,9 @@ end)
 ScriptSection:NewButton("Prison life admin", "Prison Life Admin", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/1RvgFtcx"))()
     print("Clicked")
-end) 
-ScriptSection:NewButton("Astro Hub Blox fruit", "Blox fruit script", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/1RvgFtcx"))()
-    print("Clicked")
-end) 
-ScriptSection:NewButton("shinytool", "Supported game PSX, Clicker sim, bot clash, Legends of speeds", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/1RvgFtcx"))()
-    print("Clicked")
-end) 
-ScriptSection:NewButton("Amterasu Hub", "Only Work on criminality", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tubris/public-shit-/main/ama%20hub%20crim%20free"))()
+end)
+ScriptSection:NewButton("Bad Business", "Parvus Hub", function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AlexR32/Parvus/main/Loader.lua"))("Parvus hitting p!")
     print("Clicked")
 end)
 local Tab = Window:NewTab("Scripts")
@@ -83,14 +73,11 @@ ScriptSection:NewButton("Fates Admin", "Fates Admins", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
     print("Clicked")
 end)
-
 local Tab = Window:NewTab("Settings")
 local SettingsSection = Tab:NewSection("Settings")
 SettingsSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.G, function() 
 	Library:ToggleUI()
 end)
-
-
 
 local Tab = Window:NewTab("Misc")
 local MiscSection = Tab:NewSection("Miscellaneous")
