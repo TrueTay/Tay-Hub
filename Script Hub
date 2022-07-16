@@ -165,14 +165,14 @@ wait(0.1)
 game.StarterGui:SetCore("SendNotification", {
 Title = "Tay Hub"; -- the title (ofc)
 Text = "Tay Hub is Loaded"; -- what the text says (ofc)
-Icon = "rbxassetid://7899360854"; -- the image if u want. 
+Icon = "rbxassetid://"; -- the image if u want. 
 Duration = 10; -- how long the notification should in secounds
 })
 wait(1.5)
 game.StarterGui:SetCore("SendNotification", {
 Title = "Tay Hub"; -- the title (ofc)
 Text = "Thanks for using Tay Hub"; -- what the text says (ofc)
-Icon = "rbxassetid://7899360854"; -- the image if u want. 
+Icon = "rbxassetid://"; -- the image if u want. 
 Duration = 10; -- how long the notification should in secounds
 })
 print("TayOnTop!")
